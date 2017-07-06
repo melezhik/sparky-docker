@@ -36,6 +36,10 @@ And then see what's going on either by:
 
     $ docker logs $image-id
 
+Or:
+
+    $ docker attach $image-id
+
 
 # See also
 

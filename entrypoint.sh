@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -e
 cd sparky
-perl6 db-init.pl6 && sparkyd --timeout=10
+
+if ! test -f /home/sparky/.sparky/projects/db.sqlite3; then
+  perl6 db-init.pl6
+fi
+
+sparkyd --timeout=10
 
