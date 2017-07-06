@@ -34,7 +34,7 @@ For example:
 
 And then see what's going on either by:
 
-  docker logs $image-id
+    $ docker logs $image-id
 
 
 # See also
