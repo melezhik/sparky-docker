@@ -15,8 +15,8 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 Where:
 
-* `$sparky-host-root` - sparky root directory on host 
-* `$sparky-host-root` - sparky reports directory on host 
+* `$sparky-host-root` - sparky root directory on the host 
+* `$sparky-host-report-root` - sparky reports directory on the host 
 
 
 For example:
@@ -50,11 +50,11 @@ option for sparrowdo:
 
 Builds:
 
-    $ sqlite3 $sparky-host-root/db.sqlite3
+    $ echo 'select * from builds;' | sqlite3 $sparky-host-root/db.sqlite3
 
 Reports:
 
-    $ ls -l $sparky-host-report-root/
+    $ ls -l $sparky-host-report-root/ # or you browse them by Nginx 
 
 # See also
 
