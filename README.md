@@ -4,13 +4,7 @@ Build a docker image with the [Sparky](https://github.com/melezhik/sparky)
 
 # USAGE
 
-## Checkout the project
-
-    $ git clone https://github.com/melezhik/sparky-docker.git
-
-## Build image 
-
-    $ docker build -t sparky .
+    $ docker pull sparky 
 
 ## Run application as docker container 
 
