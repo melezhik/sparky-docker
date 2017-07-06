@@ -1,6 +1,6 @@
 # SYNOPSIS
 
-Build a docker image with the [Sparky](https://github.com/melezhik/sparky)
+Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 # USAGE
 
