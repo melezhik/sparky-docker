@@ -10,8 +10,8 @@ Build a docker image with the [Sparky](https://github.com/melezhik/sparky)
 
     $ docker run -d \
     -v $sparky-host-root:/home/sparky/.sparky/projects \
-    -v $sparky-host-report-root:/home/sparky/.sparky/reports \
-    --entrypoint sparkyd sparky --timeout=10
+    -v $sparky-host-report-root:/home/sparky/.sparky/reports \  
+    sparky
 
 Where:
 
