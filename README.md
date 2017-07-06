@@ -40,6 +40,27 @@ Or:
 
     $ docker attach $image-id
 
+## Setup your sparky projects
+
+You should follow [sparky](https://github.com/melezhik/sparky) on how to do this.
+Just be aware that as for projects that run on docker container directly you should ask `no_sudo`
+option for sparrowdo:
+
+
+    $ nano $sparky-host-root/my-project/sparky.yaml
+
+    sparrowdo:
+    - no_sudo: true    
+
+## See the reports and builds
+
+Builds:
+
+    $ sqlite3 $sparky-host-root/db.sqlite3
+
+Reports:
+
+    $ ls -l $sparky-host-report-root/
 
 # See also
 
