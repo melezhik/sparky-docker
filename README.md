@@ -4,7 +4,7 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 # USAGE
 
-    $ docker pull sparky 
+    $ docker pull melezhik/sparky 
 
 ## Run application as docker container 
 

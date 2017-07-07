@@ -4,7 +4,7 @@ ENV USER=sparky
 RUN apk update
 RUN apk add git build-base sqlite  sqlite-libs  sqlite-dev bash curl perl-dev
 RUN curl -s -kL http://cpanmin.us/ -o /bin/cpanm && chmod a+x /bin/cpanm
-RUN cpanm -q --notest https://github.com/melezhik/outthentic.git
+RUN cpanm  --notest https://github.com/melezhik/outthentic.git
 RUN cpanm -q --notest Sparrow
 RUN zef install DBDish
 RUN zef install https://github.com/melezhik/sparky.git
