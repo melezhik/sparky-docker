@@ -37,7 +37,7 @@ Or:
 ## Setup your sparky projects
 
 You should follow [sparky](https://github.com/melezhik/sparky) on how to do this.
-Just be aware that as for projects that run on docker container directly you should ask `no_sudo`
+Just be aware that as projects gets built on docker container directly you should ask `no_sudo`
 option for sparrowdo:
 
 
