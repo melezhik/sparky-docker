@@ -7,8 +7,8 @@ RUN curl -s -kL http://cpanmin.us/ -o /bin/cpanm && chmod a+x /bin/cpanm
 RUN cpanm  --notest https://github.com/melezhik/outthentic.git
 RUN cpanm -q --notest https://github.com/melezhik/sparrow.git
 RUN zef install DBDish
-RUN zef install https://github.com/melezhik/sparky.git
 RUN zef install https://github.com/melezhik/sparrowdo.git
 RUN git clone https://github.com/melezhik/sparky.git
+RUN zef install https://github.com/melezhik/sparky.git
 COPY entrypoint.sh  /tmp/
 ENTRYPOINT ["/tmp/entrypoint.sh"]

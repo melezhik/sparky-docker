@@ -56,6 +56,11 @@ Reports:
 
     $ ls -l $sparky-host-report-root/ # or you browse them by Nginx 
 
+## Setting sparky timeout
+
+    docker run -e SPARKY_TIMEOUT=20
+
+
 # See also
 
 [alpine-perl6](https://github.com/JJ/alpine-perl6) - base docker image 

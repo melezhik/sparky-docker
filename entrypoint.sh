@@ -7,5 +7,5 @@ if ! test -f /home/sparky/.sparky/projects/db.sqlite3; then
   perl6 db-init.pl6
 fi
 
-sparkyd --timeout=10
+sparkyd
 
