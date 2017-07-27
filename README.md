@@ -8,7 +8,7 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 ## Run application as docker container 
 
-    $ docker run -d -v $sparky-host-root:/home/sparky/.sparky/projects sparky
+    $ docker run -d -v $sparky-host-root:/home/sparky/.sparky/projects sparky -p 3000:3000
 
 Where `$sparky-host-root` is a sparky root directory on the host 
 
