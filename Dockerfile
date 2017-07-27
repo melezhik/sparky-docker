@@ -10,7 +10,7 @@ RUN zef install DBDish
 RUN zef install https://github.com/melezhik/sparrowdo.git --verbose
 RUN zef install Bailador --force-test
 RUN zef install https://github.com/melezhik/sparky.git
-RUN git clone https://github.com/melezhik/sparky.git
+RUN git clone https://github.com/melezhik/sparky.git && echo OK
 COPY entrypoint.sh  /tmp/
 ENTRYPOINT ["/tmp/entrypoint.sh"]
 EXPOSE 3000

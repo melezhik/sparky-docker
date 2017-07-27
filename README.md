@@ -43,6 +43,15 @@ option for sparrowdo:
 
     docker run -e SPARKY_TIMEOUT=20 ...
 
+## Preserve reports
+
+You may mount Sparky reports directory to preserve reports:
+ 
+    $ docker run -d \
+    -v /home/melezhik/projects/sparky-bailador-projects:/home/sparky/.sparky/projects \
+    -v /home/melezhik/sparky-report/:/home/sparky/.sparky/reports \
+    -p 3001:3001 sparky
+
 # See also
 
 [alpine-perl6](https://github.com/JJ/alpine-perl6) - base docker image 
