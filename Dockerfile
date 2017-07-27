@@ -8,7 +8,9 @@ RUN cpanm  --notest https://github.com/melezhik/outthentic.git
 RUN cpanm -q --notest https://github.com/melezhik/sparrow.git
 RUN zef install DBDish
 RUN zef install https://github.com/melezhik/sparrowdo.git --verbose
-RUN zef install https://github.com/melezhik/sparky.git && echo OK
+RUN zef install Bailador --force-test
+RUN zef install https://github.com/melezhik/sparky.git
 RUN git clone https://github.com/melezhik/sparky.git
+EXPOSE 3000
 COPY entrypoint.sh  /tmp/
 ENTRYPOINT ["/tmp/entrypoint.sh"]

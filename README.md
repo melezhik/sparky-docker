@@ -8,31 +8,24 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 ## Run application as docker container 
 
-    $ docker run -d \
-    -v $sparky-host-root:/home/sparky/.sparky/projects \
-    -v $sparky-host-report-root:/home/sparky/.sparky/reports \  
-    sparky
+    $ docker run -d -v $sparky-host-root:/home/sparky/.sparky/projects sparky
 
-Where:
-
-* `$sparky-host-root` - sparky root directory on the host 
-* `$sparky-host-report-root` - sparky reports directory on the host 
+Where `$sparky-host-root` is a sparky root directory on the host 
 
 
 For example:
 
     $ docker run -d \
     -v /home/melezhik/projects/sparky-bailador-projects:/home/sparky/.sparky/projects \
-    -v /var/www/html/sparky-docker:/home/sparky/.sparky/reports \
-    sparky
+    -p 3001:3001 sparky
 
-And then see what's going on either by:
+And then hit Sparky web ui:
 
-    $ docker logs $image-id
+    $ firefox 127.0.0.1:3000
 
-Or:
+## Tailing Sparky daemon logs:
 
-    $ docker attach $image-id
+    $ docker logs -t -f $image-id
 
 ## Setup your sparky projects
 
@@ -46,20 +39,9 @@ option for sparrowdo:
     sparrowdo:
     - no_sudo: true    
 
-## See the reports and builds
-
-Builds:
-
-    $ echo 'select * from builds;' | sqlite3 $sparky-host-root/db.sqlite3
-
-Reports:
-
-    $ ls -l $sparky-host-report-root/ # or you browse them by Nginx 
-
 ## Setting sparky timeout
 
-    docker run -e SPARKY_TIMEOUT=20
-
+    docker run -e SPARKY_TIMEOUT=20 ...
 
 # See also
 
