@@ -17,7 +17,7 @@ For example:
 
     $ docker run -d \
     -v /home/melezhik/projects/sparky-bailador-projects:/home/sparky/.sparky/projects \
-    -p 3001:3001 sparky
+    -p 3000:3000 sparky
 
 And then hit Sparky web ui:
 
