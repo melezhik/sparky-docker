@@ -8,9 +8,9 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 ## Run application as docker container 
 
-    $ docker run -d -v $sparky-host-root:/home/sparky/.sparky/projects sparky
+    $ docker run -d -v $sparky-root:/home/sparky/.sparky/projects -p 3000:3000 melezhik/sparky
 
-Where `$sparky-host-root` is a sparky root directory on the host 
+Where `$sparky-root` is a sparky root directory
 
 
 For example:
@@ -42,15 +42,6 @@ option for sparrowdo:
 ## Setting sparky timeout
 
     docker run -e SPARKY_TIMEOUT=20 ...
-
-## Preserve reports
-
-You may mount Sparky reports directory to preserve reports:
- 
-    $ docker run -d \
-    -v /home/melezhik/projects/sparky-bailador-projects:/home/sparky/.sparky/projects \
-    -v /home/melezhik/sparky-report/:/home/sparky/.sparky/reports \
-    -p 3001:3001 sparky
 
 # See also
 
