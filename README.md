@@ -23,6 +23,10 @@ And then hit Sparky web ui:
 
     $ firefox 127.0.0.1:3000
 
+You can also create container by docker-compose:
+
+    # docker-compose -f docker-compose.yaml up 
+
 ## Tailing Sparky daemon logs:
 
     $ docker logs -t -f $image-id

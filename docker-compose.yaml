@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  sparky:
+    restart: always
+    image: melezhik/sparky 
+    volumes:
+    - /srv/docker/sparky/sparky-tasks:/home/sparky/.sparky/projects
+    ports:
+    - 3000:3000
+    environment:
+    - SPARKY_TIMEOUT=30
