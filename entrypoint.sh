@@ -10,7 +10,7 @@ fi
 
 if test -f /home/sparky/.sparky/projects/sparky-setup/sparrowfile; then
   echo "running sparky runtime setup from /home/sparky/.sparky/projects/sparky-setup/sparrowfile ..."
-  sparrowdo --nosudo --local_mode --sparrowfile /home/sparky/.sparky/projects/sparky-setup/sparrowfile \
+  sparrowdo --no_sudo --local_mode --sparrowfile=/home/sparky/.sparky/projects/sparky-setup/sparrowfile \
   --format=production
 fi
 

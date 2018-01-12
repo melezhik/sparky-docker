@@ -52,8 +52,8 @@ directory with `sparrowfile` inside:
     $ cat $sparky-root/sparky-setup/sparrowfile
 
     package-install 'open-ssl';
-    zef 'Sparky::Plugin::Notify::Telegram';
-    zef ' Sparky::Plugin::Notify::Email';
+    zef 'Sparky::Plugin::Notify::Telegram', %( notest => True );
+    zef ' Sparky::Plugin::Notify::Email', %( notest => True );
     # so on ...
 
 This sparrowfile will be executed _at_ Sparky launch.
