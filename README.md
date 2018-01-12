@@ -43,6 +43,21 @@ option for sparrowdo:
     sparrowdo:
     - no_sudo: true    
 
+
+## Sparky runtime setup
+
+If you need to install additional software into Sparky container, create project `sparky-setup` inside `$sparky-root`
+directory with `sparrowfile` inside:
+
+    $ cat $sparky-root/sparky-setup/sparrowfile
+
+    package-install 'open-ssl';
+    zef 'Sparky::Plugin::Notify::Telegram';
+    zef ' Sparky::Plugin::Notify::Email';
+    # so on ...
+
+This sparrowfile will be executed _at_ Sparky launch.
+
 ## Setting sparky timeout
 
     docker run -e SPARKY_TIMEOUT=20 ...
