@@ -56,7 +56,11 @@ directory with `sparrowfile` inside:
     zef ' Sparky::Plugin::Notify::Email', %( notest => True );
     # so on ...
 
-This sparrowfile will be executed _at_ Sparky launch.
+This sparrowfile will be executed _at_ Sparky launch:
+
+
+    $ docker run -d -v $sparky-root:/home/sparky/.sparky/projects -p 3000:3000 melezhik/sparky
+
 
 ## Setting sparky timeout
 
