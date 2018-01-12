@@ -14,7 +14,7 @@ if test -f /home/sparky/.sparky/projects/sparky-setup/sparrowfile; then
   --format=production
 fi
 
-#BAILADOR=host:0.0.0.0 perl6 bin/sparky-web.pl6 </dev/null &>/dev/null &
+BAILADOR=host:0.0.0.0 perl6 bin/sparky-web.pl6 </dev/null &>/dev/null &
 
-#sparkyd
+sparkyd
 
