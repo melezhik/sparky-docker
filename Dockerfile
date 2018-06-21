@@ -3,7 +3,7 @@ ENV PATH=/root/.rakudobrew/bin:/root/.rakudobrew/moar-master/install/share/perl6
 ENV USER=sparky
 RUN curl https://sparrowhub.org/bootstrap.sh | sh \
 && apk add git build-base sqlite  sqlite-libs  sqlite-dev procps py2-pip openssh-client \
-&& zef install Sparrowdo --/test \
+&& zef install https://github.com/melezhik/sparrowdo.git --/test \
 && zef install https://github.com/melezhik/sparky.git --/test \
 && git clone https://github.com/melezhik/sparky.git
 COPY entrypoint.sh  /tmp/
