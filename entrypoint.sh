@@ -1,20 +1,16 @@
-#!/bin/bash
-
+set -x
 set -e
 
-cd sparky
+cd ~/sparky
 
-if ! test -f /home/sparky/.sparky/projects/db.sqlite3; then
-  perl6 db-init.pl6
+mkdir -p ~/.sparky/project
+
+if test -f ~/.sparky/projects/db.sqlite3; then 
+    echo ~/.sparky/projects/db.sqlite3 exists
+else
+    raku db-init.raku
 fi
 
-if test -f /home/sparky/.sparky/projects/sparky-setup/sparrowfile; then
-  echo "running sparky runtime setup from /home/sparky/.sparky/projects/sparky-setup/sparrowfile ..."
-  sparrowdo --no_sudo --local_mode --sparrowfile=/home/sparky/.sparky/projects/sparky-setup/sparrowfile \
-  --format=production
-fi
+nohup sparkyd &
 
-BAILADOR=host:0.0.0.0 perl6 bin/sparky-web.pl6 </dev/null &>/dev/null &
-
-sparkyd
-
+raku bin/sparky-web.raku
