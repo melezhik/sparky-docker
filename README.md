@@ -12,11 +12,11 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 Where `$sparky-root` is a sparky root directory
 
-
 For example:
 
+    $ git clone  https://github.com/melezhik/sparky.git 
     $ docker run -d \
-    -v /home/melezhik/projects/sparky-bailador-projects:/home/sparky/.sparky/projects \
+    -v $PWD/sparky/examples:/home/sparky/.sparky/projects \
     -p 3000:3000 melezhik/sparky
 
 And then hit Sparky web ui:
@@ -25,7 +25,7 @@ And then hit Sparky web ui:
 
 You can also create container by docker-compose:
 
-    # docker-compose -f docker-compose.yaml up 
+    # docker-compose -f docker-compose.yaml up
 
 ## Tailing Sparky daemon logs:
 
@@ -41,8 +41,7 @@ option for sparrowdo:
     $ nano $sparky-host-root/my-project/sparky.yaml
 
     sparrowdo:
-    - no_sudo: true    
-
+    - no_sudo: true
 
 ## Sparky runtime setup
 
@@ -58,9 +57,7 @@ directory with `sparrowfile` inside:
 
 This sparrowfile will be executed _at_ Sparky launch:
 
-
     $ docker run -d -v $sparky-root:/home/sparky/.sparky/projects -p 3000:3000 melezhik/sparky
-
 
 ## Setting sparky timeout
 
@@ -68,7 +65,7 @@ This sparrowfile will be executed _at_ Sparky launch:
 
 # See also
 
-[alpine-perl6](https://github.com/JJ/alpine-perl6) - base docker image 
+[alpine-raku](https://github.com/JJ/alpine-raku) - base docker image 
 
 # Author
 
