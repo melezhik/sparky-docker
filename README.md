@@ -8,7 +8,7 @@ Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
 
 ## Run application as docker container 
 
-    $ docker run -d -v $sparky-root:/home/sparky/.sparky/projects -p 3000:3000 melezhik/sparky
+    $ docker run -d -v $sparky-root:/root/.sparky/projects -p 3000:3000 melezhik/sparky
 
 Where `$sparky-root` is a sparky root directory
 
@@ -16,7 +16,7 @@ For example:
 
     $ git clone  https://github.com/melezhik/sparky.git 
     $ docker run -d \
-    -v $PWD/sparky/examples:/home/sparky/.sparky/projects \
+    -v $PWD/sparky/examples:/root/.sparky/projects \
     -p 3000:3000 melezhik/sparky
 
 And then hit Sparky web ui:
@@ -41,23 +41,7 @@ option for sparrowdo:
     $ nano $sparky-host-root/my-project/sparky.yaml
 
     sparrowdo:
-    - no_sudo: true
-
-## Sparky runtime setup
-
-If you need to install additional software into Sparky container, create project `sparky-setup` inside `$sparky-root`
-directory with `sparrowfile` inside:
-
-    $ cat $sparky-root/sparky-setup/sparrowfile
-
-    package-install 'open-ssl';
-    zef 'Sparky::Plugin::Notify::Telegram', %( notest => True );
-    zef ' Sparky::Plugin::Notify::Email', %( notest => True );
-    # so on ...
-
-This sparrowfile will be executed _at_ Sparky launch:
-
-    $ docker run -d -v $sparky-root:/home/sparky/.sparky/projects -p 3000:3000 melezhik/sparky
+      - no_sudo: true
 
 ## Setting sparky timeout
 
@@ -65,7 +49,7 @@ This sparrowfile will be executed _at_ Sparky launch:
 
 # See also
 
-[alpine-raku](https://github.com/JJ/alpine-raku) - base docker image 
+[alpine](https://hub.docker.com/_/alpine) - Alpine docker image 
 
 # Author
 

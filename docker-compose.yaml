@@ -5,7 +5,7 @@ services:
     restart: always
     image: melezhik/sparky 
     volumes:
-    - /srv/docker/sparky/sparky-tasks:/home/sparky/.sparky/projects
+    - /srv/docker/sparky/sparky-tasks:/root/.sparky/projects
     ports:
     - 3000:3000
     environment:
