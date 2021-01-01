@@ -49,7 +49,7 @@ option for sparrowdo:
 
 # See also
 
-[alpine](https://hub.docker.com/_/alpine) - Alpine docker image 
+[Docker Alpine Linux](https://hub.docker.com/_/alpine) - Alpine docker image
 
 # Author
 
