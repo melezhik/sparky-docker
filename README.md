@@ -1,12 +1,12 @@
 # SYNOPSIS
 
-Run [Sparky](https://github.com/melezhik/sparky) as Docker container.
+Run [Sparky](https://github.com/melezhik/sparky) as a Docker container.
 
 # USAGE
 
     $ docker pull melezhik/sparky 
 
-## Run application as docker container 
+## Run application as a docker container 
 
     $ docker run -d -v $sparky-root:/root/.sparky/projects -p 3000:3000 melezhik/sparky
 
