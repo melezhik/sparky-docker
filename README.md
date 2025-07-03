@@ -2,6 +2,10 @@
 
 Run [Sparky](https://github.com/melezhik/sparky) as a Docker container.
 
+# WARNING
+
+project is deprecated, please use this instead - https://github.com/melezhik/sparky/blob/master/docs/sparky_on_docker.md
+
 # USAGE
 
     $ docker pull melezhik/sparky 
